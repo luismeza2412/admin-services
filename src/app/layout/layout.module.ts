@@ -5,6 +5,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { BreadcrumbComponent } from '../shared/components/breadcrumb/breadcrumb.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -18,7 +20,10 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     CommonModule,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    SharedModule
+
   ],
+
 })
 export class LayoutModule { }

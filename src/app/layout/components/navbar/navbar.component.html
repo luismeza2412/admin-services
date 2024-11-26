@@ -3,14 +3,18 @@
       <i class="fa fa-lg fa-home"></i>
     </a>
   
-    <div class="breadcrumb-container">
+    <div class="breadcrumb-container"> 
       <ol class="breadcrumb-quipux mb-0">
-        <li class="breadcrumb-item" *ngFor="let crumb of breadcrumb; let i = index">
-          <a href="#" [routerLink]="getLink(i)">{{ crumb }}</a>
-        </li>
+        <li
+        *ngFor="let breadcrumb of breadcrumbs$ | async; let last = last"
+        class="breadcrumb-item"
+        [class.active]="last"
+      >
+        <a *ngIf="!last; else lastBreadcrumb" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+        <ng-template #lastBreadcrumb>{{ breadcrumb.label }}</ng-template>
+      </li>
       </ol>
     </div>
-  
     <div class="ml-auto">
       <div class="dropdown">
         <button class="btn btn-user dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

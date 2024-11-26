@@ -9,14 +9,15 @@ import { HomeComponent } from './features/components/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: LayoutComponent, data: { breadcrumb: 'Inicio' },
     children: [
-      { path: '', component: HomeComponent, data: { breadcrumb: 'Inicio' } },
+      { path: '', component: HomeComponent },
       { path: 'company', component: CompanyComponent, data: { breadcrumb: 'Empresa' } },
-      { path: 'article', component: ArticleComponent, data: { breadcrumb: 'Articulo' } },
+      { path: 'article', component: ArticleComponent, data: { breadcrumb: 'Artículo' } },
     ],
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

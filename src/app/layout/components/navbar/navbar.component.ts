@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { BreadcrumbService } from 'src/app/services/breadcrump.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,7 @@ import { filter } from 'rxjs';
 })
 export class NavbarComponent {
 
-  breadcrumb = ['Empresa', 'Articulo'];
+  breadcrumbs$ = this.breadcrumbService.breadcrumbs$;
 
-  getLink(index: number) {
-    return `/ruta${index}`;
-  }
+  constructor(private breadcrumbService: BreadcrumbService) {}
 }
