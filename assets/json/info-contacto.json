@@ -1,0 +1,29 @@
+[
+  {
+    "informacionContacto": {
+      "direccion": {
+        "principal": {
+          "calle": "Carrera 52 # 91-66",
+          "ciudad": "Medellín",
+          "pais": "Colombia"
+        },
+        "correspondencia": {
+          "calle": "Carrera 52 # 91-66",
+          "ciudad": "Envigado",
+          "pais": "Colombia"
+        }
+      },
+      "correoElectronico": "usuarioapellido@hotmail.com",
+      "sitioWeb": "www.usuarioapellido.com",
+      "redesSociales": {
+        "instagram": "www.instagram.com/usuarioapellido",
+        "linkedin": "www.linkeind.com/usuarioapellido"
+      },
+      "telefonos": {
+        "fijo": "+57 (4) 313-70-00",
+        "celular": "(312) 313-44-7"
+      }
+    }
+  }
+  
+]
