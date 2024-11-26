@@ -1,0 +1,50 @@
+<div class="sidebar" [class.collapsed]="isCollapsed">
+  <div class="row mb-5 m-1">
+    <div class="col-md-6">
+      <button id="toggleSidebar" class="btn btn-quipux text-center" (click)="toggleSidebar()">
+        <i class="fa-solid fa-xl fa-bars"></i>
+      </button>
+    </div>
+    <div class="col-md-6">
+      <img class="logo" src="../../../../assets/img/logo.png" alt="Logo" />
+    </div>
+  </div>
+  <nav class="nav flex-column m-2">
+    <button
+      class="btn btn-quipux"
+      [class.active]="activeOption === 'EMPRESAS'"
+      (click)="setActiveOption('EMPRESAS')"
+      [routerLink]="'/company'"
+    >
+      <i class="fa-solid fa-lg fa-bag-shopping"></i>
+      <span *ngIf="!isCollapsed">EMPRESAS</span> <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <button
+      class="btn btn-quipux"
+      [class.active]="activeOption === 'ARTICULOS'"
+      (click)="setActiveOption('ARTICULOS')"
+      [routerLink]="'/article'"
+    >
+      <i class="fa-solid fa-lg fa-newspaper"></i>
+      <span *ngIf="!isCollapsed">ARTICULOS</span>  <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="dropdown-menu">
+      <a
+        class="dropdown-item"
+        [class.active]="activeOption === 'SUBOPCION1'"
+        (click)="setActiveOption('SUBOPCION1')"
+        href="#"
+      >
+        Subopción 1
+      </a>
+    </div>
+    <button
+      class="btn btn-quipux"
+      [class.active]="activeOption === 'COLABORADORES'"
+      (click)="setActiveOption('COLABORADORES')"
+    >
+      <i class="fa-solid fa-lg fa-user"></i>
+      <span *ngIf="!isCollapsed">COLABORADORES</span>  <i class="fa-solid fa-chevron-down"></i>
+    </button>
+  </nav>
+</div>
