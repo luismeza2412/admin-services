@@ -11,7 +11,7 @@ import { ContactService } from 'src/app/services/contact.service';
 export class CompanyComponent {
 
   informacionContacto: InformacionContacto = 
-    {
+    { 
       direccion: {
         principal: { calle: 'Carrera 52 # 91-66', ciudad: 'Medellín', pais: 'Colombia' },
         correspondencia: { calle: 'Carrera 52 # 91-66', ciudad: 'Envigado', pais: 'Colombia' }

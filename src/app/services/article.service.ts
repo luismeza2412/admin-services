@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Article } from '../core/models/article.model'; 
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root', 
 })
 export class ArticleService {
   private jsonUrl = 'assets/json/articulos.json';
